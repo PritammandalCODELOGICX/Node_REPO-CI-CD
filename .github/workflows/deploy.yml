@@ -45,5 +45,5 @@ jobs:
             docker pull $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
             docker rm -f node-app || true
 
-            docker run -d -p 3000:3000 --name node-app \
-            $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+            docker run -d -p 3000:3000 --name node-app $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+            
